@@ -1,0 +1,13 @@
+
+<body>
+<div class="divContainer">
+<div *ngFor="let fund of funds">
+    <br>
+      <mat-divider></mat-divider>
+    <button mat-flat-button color="primary" [routerLink]="['/funds', fund.id]">{{fund.name}}</button>
+      <mat-divider></mat-divider>
+      <br>
+
+</div>
+</div>
+</body>

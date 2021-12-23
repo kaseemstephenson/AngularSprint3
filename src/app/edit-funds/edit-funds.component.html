@@ -1,0 +1,79 @@
+<html>
+<body>
+  <div class="divContainer">
+<div style="text-align:center;width: 500px;margin: 0 auto;border-style: dotted;">
+<div *ngFor="let fund of funds">
+       <button mat-raised-button color="primary" (click)="assignTargetFund(fund)">{{fund.name}}</button>
+
+
+    <mat-divider></mat-divider>
+    <br>
+
+</div>
+<form class="formStyle">
+  <mat-form-field class="fieldStyle" appearance="fill">
+    <mat-label>NAME</mat-label>
+    <input [(ngModel)]="targetFund.name"[ngModelOptions]="{standalone: true}" matInput >
+  </mat-form-field>
+
+
+
+  <mat-form-field class="fieldStyle" appearance="fill">
+    <mat-label>TICKER</mat-label>
+    <input [(ngModel)]="targetFund.ticker"[ngModelOptions]="{standalone: true}" matInput >
+  </mat-form-field>
+
+
+
+  <mat-form-field class="fieldStyle" appearance="fill">
+    <mat-label>Asset Class</mat-label>
+    <input [(ngModel)]="targetFund.asset_class"[ngModelOptions]="{standalone: true}" matInput >
+  </mat-form-field>
+
+
+
+  <mat-form-field class="fieldStyle" appearance="fill">
+    <mat-label>Risk Level</mat-label>
+    <input type="number" [(ngModel)]="targetFund.risk_level"[ngModelOptions]="{standalone: true}" matInput >
+  </mat-form-field>
+
+
+
+  <mat-form-field class="fieldStyle" appearance="fill">
+    <mat-label>Expense Ratio</mat-label>
+    <input type="number" [(ngModel)]="targetFund.expense_ratio"[ngModelOptions]="{standalone: true}" matInput >
+  </mat-form-field>
+
+
+
+  <mat-form-field class="fieldStyle" appearance="fill">
+    <mat-label>Investment Minimum</mat-label>
+    <input type="number" [(ngModel)]="targetFund.investment_min"[ngModelOptions]="{standalone: true}" matInput >
+  </mat-form-field>
+
+
+
+  <mat-form-field class="fieldStyle" appearance="fill">
+    <mat-label>Price</mat-label>
+    <input type="number" [(ngModel)]="targetFund.price"[ngModelOptions]="{standalone: true}" matInput >
+  </mat-form-field>
+
+
+
+  <mat-form-field class="fieldStyle" appearance="fill">
+    <mat-label>Price</mat-label>
+    <input type="number"  [(ngModel)]="targetFund.change_price"[ngModelOptions]="{standalone: true}" matInput >
+  </mat-form-field>
+
+
+</form>
+<button mat-flat-button color="warn" (click)="deleteFund()">Delete</button>
+
+<button mat-flat-button color="warn" (click)="editFund()">Finalize Update</button>
+<button mat-flat-button color="warn" (click)="addFund()">Create New</button>
+<button mat-flat-button color="warn" (click)="cancelEditFund()">Cancel</button>
+
+</div>
+</div>
+</body>
+</html>

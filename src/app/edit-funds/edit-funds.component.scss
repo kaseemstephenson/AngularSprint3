@@ -1,0 +1,25 @@
+.formStyle {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.fieldStyle {
+  width: 100%;
+}
+body{
+  background-color:gray;
+  overflow:auto
+
+}
+
+.divContainer{
+  text-align:center;
+  width:500px;
+  margin: 0 auto;
+  border-style:double;
+  -moz-box-shadow: 0 0 30px 5px #999;
+    -webkit-box-shadow: 0 0 30px 5px #999;
+    background-color:white;
+
+}
